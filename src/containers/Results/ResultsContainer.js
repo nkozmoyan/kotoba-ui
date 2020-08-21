@@ -10,9 +10,9 @@ function ResultsContainer(props){
 
     useEffect(()=>{
 
-        const  API_URL = process.env.REACT_APP_API ? process.env.REACT_APP_API : '/';
+        const  API_URL = process.env.REACT_APP_API ? process.env.REACT_APP_API : 'https://kotoba-api.azurewebsites.net';
 
-        window.fetch(API_URL + '/report',{
+        window.fetch(API_URL + '/api/report',{
             method:'POST',
             headers: {
                 'Content-Type': 'application/json',
