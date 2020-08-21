@@ -1,13 +1,16 @@
 import { AzureFunction, Context, HttpRequest } from "@azure/functions"
+import App from './app';
 
 const httpTrigger: AzureFunction = async function (context: Context, req: HttpRequest): Promise<void> {
     context.log('HTTP trigger function processed a request.');
-    const name = (req.query.name || (req.body && req.body.name));
 
-    if (name) {
+    if (req.body) {
+
+        let body = await App(req);
+
         context.res = {
             // status: 200, /* Defaults to 200 */
-            body: "Hello " + (req.query.name || req.body.name)
+            body: body
         };
     }
     else {

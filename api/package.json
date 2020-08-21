@@ -9,7 +9,13 @@
     "start": "func start",
     "test": "echo \"No tests yet...\""
   },
-  "dependencies": {},
+  "dependencies": {
+    "@google-cloud/language": "^4.1.0",
+    "alasql": "^0.6.3",
+    "dotenv": "^8.2.0",
+    "node-fetch": "^2.6.0",
+    "url": "^0.11.0"
+  },
   "devDependencies": {
     "@azure/functions": "^1.0.2-beta2",
     "typescript": "^3.3.3"

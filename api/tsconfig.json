@@ -1,10 +1,13 @@
 {
   "compilerOptions": {
+    "moduleResolution": "node",
     "module": "commonjs",
-    "target": "es6",
+    "target": "esnext",
     "outDir": "dist",
     "rootDir": ".",
     "sourceMap": true,
-    "strict": false
+    "strict": false,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true
   }
 }
