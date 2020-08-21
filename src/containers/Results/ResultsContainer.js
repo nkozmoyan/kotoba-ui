@@ -9,8 +9,10 @@ function ResultsContainer(props){
     const[data, updater] = useState([]);
 
     useEffect(()=>{
-        
-        window.fetch('/api/report',{
+
+        const  API_URL = process.env.REACT_APP_API ? process.env.REACT_APP_API : '/';
+
+        window.fetch(API_URL + '/report',{
             method:'POST',
             headers: {
                 'Content-Type': 'application/json',
